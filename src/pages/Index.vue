@@ -11,12 +11,10 @@ export default {
     readFingerPrint () {
       this.$fingerPrint()
         .then((suc) => {
-          console.log('Success', suc)
           this.alert('Fingerprint Success!')
         })
         .catch((err) => {
-          console.log('Error', err)
-          this.alert('Fingerprint Failed')
+          this.alert('Fingerprint Failed', err)
         })
     },
     alert (msg) {
